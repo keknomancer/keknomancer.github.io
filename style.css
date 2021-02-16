@@ -1,19 +1,17 @@
 body {
     background: #f5f4f0;
     margin: 0;
-    text-align: center;
 }
 
 * {
-    line-height: 1.6;
+    line-height: 1.7;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
 * a {
     font-size: inherit;
-    text-decoration: none;
-    color: #f5f4f0;
-    border-bottom: 1px dashed #f5f4f0;
+    text-decoration: underline;
+    color: inherit;
 }
 
 .nav-item {
@@ -24,30 +22,38 @@ body {
     text-align: center;
 }
 
+.nav-item a {
+    text-decoration: none;
+}
+
 .active-nav.nav-item {
     color: #303030;
     background-color: #f5f4f0;
 }
 
+.active-nav.nav-item {
+    text-decoration: none;
+}
+
 ul {
     text-align: left;
     font-size: 1.2em;
-    max-width: 70ch;
-    padding: 0;
+    width: inherit;
+    margin: 20px;
 }
 
 .text {
-    margin: 4%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 1%;
     max-width: 70ch;
     font-size: 1.3em;
+    text-align: left;
 }
 
 .text * {
     font-size: 1.3em;
-}
-
-#active-nav.nav-item:hover {
-    background-color: #dfdfdf;
 }
 
 nav {
@@ -67,12 +73,20 @@ nav {
 }
 
 .page-section {
-    height: 100vh;
+    min-height: calc(100vh - 3em);
     border-bottom: 2px solid #303030;
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
+    text-align: left;
+    margin-left: 4em;
+    margin-right: 4em;
+    padding-top: 2em;
+    margin-bottom: 1em;
+}
+
+.page-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .page-section:last-child {
@@ -82,7 +96,7 @@ nav {
 .section-header {
     font-family: 'IBM Plex Serif', serif;
     font-size: 2em;
-    margin-top: 3%;
+    margin-top: 1%;
 }
 
 @supports(--a: 0) {
@@ -119,14 +133,15 @@ nav {
         color: #f5f4f0;
     }
 
-    * a:hover {
-        border-bottom: 1px solid #f5f4f0;
+    .nav-item a:hover {
+        border-bottom: none;
     }
 }
 
 @media screen and (max-width: 800px) {
     .page-section {
         justify-content: initial;
+        margin: 1em;
     }
     nav {
         width: 100%;
@@ -153,7 +168,6 @@ nav {
         flex-direction: column;
         width: 100%;
         margin: 0;
-        text-align: center;
     }
     .text {
         max-width: 50ch;
@@ -164,4 +178,9 @@ nav {
         padding-left: 5%;
         padding-right: 5%;
     }
+}
+#testing {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
