@@ -9,6 +9,11 @@ body {
 }
 
 * a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page-section a, .text a {
     font-size: inherit;
     text-decoration: underline;
     color: inherit;
@@ -18,21 +23,13 @@ body {
     padding: 20px;
     background-color: #303030;
     color: #f5f4f0;
-    width: calc(100% - 40px);
+    width: calc(100% - 40px);   
     text-align: center;
-}
-
-.nav-item a {
-    text-decoration: none;
 }
 
 .active-nav.nav-item {
     color: #303030;
     background-color: #f5f4f0;
-}
-
-.active-nav.nav-item {
-    text-decoration: none;
 }
 
 ul {
@@ -81,12 +78,6 @@ nav {
     margin-right: 4em;
     padding-top: 2em;
     margin-bottom: 1em;
-}
-
-.page-section-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .page-section:last-child {
@@ -161,6 +152,7 @@ nav {
         align-items: center;
         display: flex;
         font-size: initial;
+        padding: 10px;
     }
     #body-wrapper {
         display: flex;
@@ -178,9 +170,4 @@ nav {
         padding-left: 5%;
         padding-right: 5%;
     }
-}
-#testing {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
 }
